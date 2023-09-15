@@ -1,4 +1,4 @@
-# Exp-02-Implementation-of-Half-Adder-and-Full-Adder-circuit
+# Exp-03-Implementation-of-Half-Adder-and-Full-Adder-circuit
 
 # Implementation-of-Half-Adder-and-Full-Adder-circuit
 ### AIM:
@@ -36,19 +36,43 @@ Switch ON the main switch
 If the output is 1, then the led glows.
 ### 
 Program:
-/*
-Program to design a half adder and full adder circuit and verify its truth table in quartus using Verilog programming.
-Developed by: 
-RegisterNumber:  
-*/
-Logic symbol & Truthtable
+```
+Developed by:gokularamanan k
+RegisterNumber:212222230040
+
+
+1. Program to design a half adder:
+
+module ex3(a,b,sum,carry);
+input a,b;
+output sum,carry;
+assign sum=a^b;
+assign carry=a&b;
+endmodule 
+
+2. Program to design a full adder:
+
+module ex31(a,b,cin,sum,carry);
+input a,b,cin;
+output sum,carry;
+assign sum=a^b^cin;
+assign carry=(a&b)|((a^b)&cin);
+endmodule```
+
+
+```
+
+Truthtable: half adder:
+![image](https://github.com/Gokulanbazhagan/Exp-02-Implementation-of-Half-Adder-and-Full-Adder-circuit/assets/119518996/a2dd1d28-a7ea-4566-9711-635cf2fb2c6e)
+full adder:
+![image](https://github.com/Gokulanbazhagan/Exp-02-Implementation-of-Half-Adder-and-Full-Adder-circuit/assets/119518996/08f4a947-a33f-4c41-b3d1-32e3b16a0e91)
+
 RTL realization
+![image](https://github.com/Gokulanbazhagan/Exp-02-Implementation-of-Half-Adder-and-Full-Adder-circuit/assets/119518996/6edb1e2d-ffff-47fe-832e-ecd3aa521eda)
 
-### Output:
-### RTL
-### TIMING DIAGRAM
-
-
-### TRUTH TABLE 
+### Output waveform:
+![image](https://github.com/Gokulanbazhagan/Exp-02-Implementation-of-Half-Adder-and-Full-Adder-circuit/assets/119518996/a2b35865-295f-4614-865c-5465b37cac5c)
+ 
 
 ### Result:
+Thus the half adder and full adder circuit are designed and the truth table for half adder and full adder are verified.
